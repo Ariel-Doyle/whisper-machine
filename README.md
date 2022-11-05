@@ -26,7 +26,7 @@ _Specifically, this webpage is designed to accept user input text and return tha
 
 ## Known Bugs
 
-- _None._
+- _The level to which the font size can decrease is finite and there is no error message in place when the user reaches that limit._
 
 ## License
 
