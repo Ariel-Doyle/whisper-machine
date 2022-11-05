@@ -1,0 +1,10 @@
+.hidden {
+  display: none;
+}
+
+#whisper {
+  text-align: center;
+  font-style: italic;
+  border-style: hidden;
+  margin: 70px;
+}
