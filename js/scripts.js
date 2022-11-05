@@ -16,13 +16,13 @@ function returnSmallerFont() {
  
 function setFormSubmissionEventHandler() {
   let form = document.querySelector("form");
-  form.onsubmit = function(e) {
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
     returnSmallerFont();
     document.querySelector("div#whisper").removeAttribute("class");
-  }
+  });
 }
 
-window.onload = function () {
+window.addEventListener("load", function () {
   setFormSubmissionEventHandler();
-};
+});
