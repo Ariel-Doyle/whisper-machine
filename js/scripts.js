@@ -2,17 +2,23 @@
 
 function getInitialWhisperValue() {
   const personInput = document.getElementById("personInput").value;
-
   const whisper = document.querySelector("span#personInput1");
   whisper.innerText = personInput.toLowerCase();
-  whisper.style.fontSize = '45px';
 }
 
+function returnSmallerFont() {
+  getInitialWhisperValue();
+    const computedFont = window.getComputedStyle(whisper, null);
+    let computedSize = computedFont.getPropertyValue('font-size');
+    let smallerFont = parseFloat(computedSize) * .9;
+    whisper.style.fontSize = smallerFont + 'px';
+}
+ 
 function setFormSubmissionEventHandler() {
   let form = document.querySelector("form");
   form.onsubmit = function(e) {
     e.preventDefault();
-    getInitialWhisperValue();
+    returnSmallerFont();
     document.querySelector("div#whisper").removeAttribute("class");
   }
 }
