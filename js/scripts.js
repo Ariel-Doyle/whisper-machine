@@ -2,8 +2,10 @@
 
 function getInitialWhisperValue() {
   const personInput = document.getElementById("personInput").value;
-  
-  document.querySelector("span#personInput1").innerText = personInput;
+
+  const whisper = document.querySelector("span#personInput1");
+  whisper.innerText = personInput.toLowerCase();
+  whisper.style.fontSize = '45px';
 }
 
 function setFormSubmissionEventHandler() {
